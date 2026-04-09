@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MD Cleaning — In Affiliation with Closing Concierge Co.</title>
+  <meta name="description" content="Professional residential and Airbnb/short-term rental cleaning services in Southern Ontario. Move-in, move-out, turnovers, and pre-showing cleans. In affiliation with Closing Concierge Co." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── MD CLEANING PAGE OVERRIDES ── */
+    body.md-page { background: var(--md-linen); }
+
+    :root {
+      --md-linen:   #F4F7F6;
+      --md-mist:    #B4C4BC;
+      --md-mist-dk: #7A9E94;
+      --md-mist-lt: #D8E8E4;
+      --md-sage:    #8FA68C;
+      --md-ink:     #2E3835;
+      --md-taupe:   #6B7B76;
+      --md-border:  #D0DDD9;
+      --md-offwhite:#FBFCFC;
+      --md-cream:   #EEF3F1;
+    }
+
+    /* NAV override for MD page */
+    .nav-md { background: rgba(46, 56, 53, 0.97) !important; border-bottom-color: rgba(180,196,188,0.25) !important; }
+
+    /* HERO */
+    .md-hero {
+      background: var(--md-ink);
+      padding: calc(var(--nav-h) + 80px) 48px 90px;
+      position: relative;
+      overflow: hidden;
+    }
+    .md-hero::before {
+      content: '';
+      position: absolute;
+      bottom: -1px; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--md-mist), var(--md-sage), transparent);
+    }
+    .md-hero::after {
+      content: '';
+      position: absolute;
+      top: 20%; right: -8%;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(143,166,140,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .md-hero-inner {
+      position: relative; z-index: 1;
+      max-width: 700px;
+      animation: fadeUp 0.9s ease both;
+    }
+    .md-eyebrow {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--md-mist);
+      margin-bottom: 24px;
+      display: block;
+    }
+    .md-hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      font-weight: 300;
+      line-height: 1.05;
+      color: var(--md-offwhite);
+      margin-bottom: 24px;
+    }
+    .md-hero-title em { color: var(--md-mist); font-style: italic; }
+    .md-hero-sub {
+      font-size: 1rem;
+      color: rgba(251,252,252,0.6);
+      max-width: 520px;
+      line-height: 1.75;
+      margin-bottom: 40px;
+    }
+    .md-affil {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(251,252,252,0.35);
+      border-top: 1px solid rgba(180,196,188,0.2);
+      padding-top: 20px;
+      margin-top: 8px;
+    }
+    .md-affil a { color: var(--md-mist); border-bottom: 1px solid rgba(180,196,188,0.3); }
+
+    /* STRIP */
+    .md-strip {
+      background: var(--md-cream);
+      border-bottom: 1px solid var(--md-border);
+    }
+    .md-strip-inner {
+      max-width: 1100px; margin: 0 auto;
+      padding: 0 48px;
+      display: flex; align-items: center;
+    }
+    .md-strip-item {
+      flex: 1; display: flex; align-items: center;
+      gap: 14px; padding: 22px 0;
+    }
+    .md-strip-num {
+      font-family: var(--font-display);
+      font-size: 1.5rem; color: var(--md-mist-dk); line-height: 1;
+    }
+    .md-strip-label {
+      font-size: 0.76rem; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--md-taupe);
+    }
+    .md-strip-div { width: 1px; height: 36px; background: var(--md-border); margin: 0 16px; flex-shrink: 0; }
+
+    /* INTRO */
+    .md-intro { padding: 90px 48px; background: var(--md-linen); }
+    .md-intro-inner {
+      max-width: 1000px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;
+    }
+    .md-intro-text .md-section-eyebrow { color: var(--md-mist-dk); }
+    .md-intro-text h2 { color: var(--md-ink); margin-bottom: 20px; }
+    .md-intro-text p { color: var(--md-taupe); font-size: 0.92rem; margin-bottom: 14px; line-height: 1.75; }
+    .md-trust {
+      display: flex; flex-direction: column; gap: 18px;
+      margin-top: 32px;
+    }
+    .md-trust-item {
+      display: flex; align-items: flex-start; gap: 16px;
+      padding: 18px 20px;
+      background: var(--md-offwhite);
+      border: 1px solid var(--md-border);
+      border-left: 3px solid var(--md-mist);
+    }
+    .md-trust-icon { color: var(--md-mist-dk); font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+    .md-trust-item h4 { font-family: var(--font-display); font-size: 1rem; color: var(--md-ink); margin-bottom: 4px; }
+    .md-trust-item p { font-size: 0.82rem; color: var(--md-taupe); margin: 0; }
+
+    /* SERVICES */
+    .md-services { padding: 80px 48px; background: var(--md-offwhite); border-top: 1px solid var(--md-border); border-bottom: 1px solid var(--md-border); }
+    .md-services-inner { max-width: 1000px; margin: 0 auto; }
+    .md-services-inner > .md-section-eyebrow { color: var(--md-mist-dk); }
+    .md-services-inner > h2 { color: var(--md-ink); margin-bottom: 14px; }
+    .md-services-inner > p { color: var(--md-taupe); font-size: 0.92rem; max-width: 580px; margin-bottom: 56px; }
+
+    .md-svc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .md-svc-card {
+      background: var(--md-linen);
+      border: 1px solid var(--md-border);
+      padding: 32px;
+      position: relative;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .md-svc-card:hover { border-color: var(--md-mist); transform: translateY(-3px); }
+    .md-svc-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--md-mist);
+    }
+    .md-svc-tag {
+      font-size: 0.65rem; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--md-mist-dk);
+      margin-bottom: 14px; display: block;
+    }
+    .md-svc-card h3 {
+      font-family: var(--font-display); font-size: 1.4rem;
+      color: var(--md-ink); margin-bottom: 12px;
+    }
+    .md-svc-card p { font-size: 0.875rem; color: var(--md-taupe); margin-bottom: 20px; line-height: 1.7; }
+    .md-svc-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .md-svc-list li {
+      font-size: 0.84rem; color: var(--md-ink);
+      padding-left: 18px; position: relative;
+    }
+    .md-svc-list li::before { content: '·'; position: absolute; left: 0; color: var(--md-mist-dk); font-size: 1rem; line-height: 1.3; }
+
+    /* RESIDENTIAL DETAIL */
+    .md-residential { padding: 80px 48px; background: var(--md-linen); }
+    .md-res-inner { max-width: 1000px; margin: 0 auto; }
+    .md-res-inner > .md-section-eyebrow { color: var(--md-mist-dk); }
+    .md-res-inner > h2 { color: var(--md-ink); margin-bottom: 14px; }
+    .md-res-inner > p { color: var(--md-taupe); font-size: 0.92rem; max-width: 580px; margin-bottom: 48px; }
+
+    .md-res-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .md-res-item {
+      padding: 28px 24px;
+      background: var(--md-offwhite);
+      border: 1px solid var(--md-border);
+      text-align: center;
+    }
+    .md-res-icon {
+      font-size: 1.6rem; margin-bottom: 14px; display: block;
+      color: var(--md-mist-dk);
+    }
+    .md-res-item h4 { font-family: var(--font-display); font-size: 1.1rem; color: var(--md-ink); margin-bottom: 8px; }
+    .md-res-item p { font-size: 0.82rem; color: var(--md-taupe); }
+
+    /* STR SECTION */
+    .md-str {
+      padding: 80px 48px;
+      background: var(--md-ink);
+      position: relative;
+    }
+    .md-str::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--md-mist), transparent);
+    }
+    .md-str-inner {
+      max-width: 1000px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+    }
+    .md-str-text .md-section-eyebrow { color: var(--md-mist); }
+    .md-str-text h2 { color: var(--md-offwhite); margin-bottom: 20px; }
+    .md-str-text p { color: rgba(251,252,252,0.55); font-size: 0.92rem; margin-bottom: 14px; line-height: 1.75; }
+    .md-str-features {
+      display: flex; flex-direction: column; gap: 20px;
+    }
+    .md-str-feat {
+      display: flex; gap: 16px; align-items: flex-start;
+      border-left: 2px solid var(--md-mist);
+      padding-left: 20px;
+    }
+    .md-str-feat-icon { color: var(--md-mist); font-size: 1rem; flex-shrink: 0; margin-top: 3px; }
+    .md-str-feat h4 { font-family: var(--font-display); font-size: 1rem; color: var(--md-offwhite); margin-bottom: 4px; }
+    .md-str-feat p { font-size: 0.82rem; color: rgba(251,252,252,0.45); }
+
+    /* HOW IT WORKS */
+    .md-how { padding: 80px 48px; background: var(--md-cream); border-top: 1px solid var(--md-border); }
+    .md-how-inner { max-width: 800px; margin: 0 auto; text-align: center; }
+    .md-how-inner .md-section-eyebrow { color: var(--md-mist-dk); }
+    .md-how-inner h2 { color: var(--md-ink); margin-bottom: 48px; }
+    .md-steps {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+      position: relative; text-align: center;
+    }
+    .md-steps::before {
+      content: '';
+      position: absolute; top: 22px; left: 12.5%; right: 12.5%; height: 1px;
+      background: var(--md-border);
+      z-index: 0;
+    }
+    .md-step { position: relative; z-index: 1; padding: 0 12px; }
+    .md-step-num {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--md-offwhite); border: 1px solid var(--md-mist);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-display); font-size: 1.1rem; color: var(--md-mist-dk);
+      margin: 0 auto 16px;
+    }
+    .md-step h4 { font-family: var(--font-display); font-size: 1rem; color: var(--md-ink); margin-bottom: 8px; }
+    .md-step p { font-size: 0.8rem; color: var(--md-taupe); line-height: 1.6; }
+
+    /* CCO AFFILIATION CALLOUT */
+    .md-cco-callout {
+      padding: 70px 48px;
+      background: var(--md-offwhite);
+      border-top: 1px solid var(--md-border);
+    }
+    .md-cco-inner {
+      max-width: 900px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+    }
+    .md-cco-text .md-section-eyebrow { color: var(--md-mist-dk); }
+    .md-cco-text h2 { color: var(--md-ink); margin-bottom: 16px; }
+    .md-cco-text p { color: var(--md-taupe); font-size: 0.9rem; margin-bottom: 12px; line-height: 1.75; }
+    .md-cco-box {
+      background: var(--md-ink);
+      padding: 36px 32px;
+      border: 1px solid rgba(180,196,188,0.15);
+    }
+    .md-cco-box-eyebrow {
+      font-size: 0.68rem; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--md-mist);
+      margin-bottom: 14px; display: block;
+    }
+    .md-cco-box h3 {
+      font-family: var(--font-display); font-size: 1.6rem;
+      color: var(--md-offwhite); margin-bottom: 12px;
+    }
+    .md-cco-box p { font-size: 0.85rem; color: rgba(251,252,252,0.5); margin-bottom: 20px; }
+    .md-cco-box a {
+      font-size: 0.75rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--md-mist);
+      border-bottom: 1px solid rgba(180,196,188,0.4);
+      padding-bottom: 2px;
+    }
+
+    /* CTA */
+    .md-cta {
+      padding: 90px 48px; text-align: center;
+      background: var(--md-linen);
+      border-top: 1px solid var(--md-border);
+    }
+    .md-cta-inner { max-width: 560px; margin: 0 auto; }
+    .md-cta .md-section-eyebrow { color: var(--md-mist-dk); }
+    .md-cta h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); color: var(--md-ink); margin-bottom: 16px; }
+    .md-cta p { color: var(--md-taupe); font-size: 0.9rem; margin-bottom: 36px; }
+    .btn-md {
+      display: inline-block;
+      background: var(--md-ink);
+      color: var(--md-offwhite);
+      font-family: var(--font-body);
+      font-size: 0.8rem; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 14px 40px;
+      border: 1px solid var(--md-ink);
+      transition: background 0.25s, border-color 0.25s;
+    }
+    .btn-md:hover { background: var(--md-mist-dk); border-color: var(--md-mist-dk); }
+    .md-cta-email { margin-top: 20px; font-size: 0.85rem; color: var(--md-taupe); }
+    .md-cta-email a { color: var(--md-mist-dk); border-bottom: 1px solid rgba(122,158,148,0.4); }
+
+    /* FOOTER override for MD page */
+    .footer-md {
+      background: var(--md-ink);
+      border-top-color: rgba(180,196,188,0.2);
+    }
+
+    /* MD SECTION EYEBROW */
+    .md-section-eyebrow {
+      font-family: var(--font-body);
+      font-size: 0.72rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--md-mist-dk);
+      margin-bottom: 14px; display: block;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .md-hero { padding: calc(var(--nav-h) + 48px) 24px 70px; }
+      .md-strip-inner { padding: 0 24px; flex-wrap: wrap; }
+      .md-strip-div { display: none; }
+      .md-strip-item { width: 50%; }
+      .md-intro { padding: 60px 24px; }
+      .md-intro-inner { grid-template-columns: 1fr; gap: 48px; }
+      .md-services { padding: 60px 24px; }
+      .md-svc-grid { grid-template-columns: 1fr; }
+      .md-residential { padding: 60px 24px; }
+      .md-res-grid { grid-template-columns: 1fr 1fr; }
+      .md-str { padding: 60px 24px; }
+      .md-str-inner { grid-template-columns: 1fr; gap: 48px; }
+      .md-how { padding: 60px 24px; }
+      .md-steps { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .md-steps::before { display: none; }
+      .md-cco-callout { padding: 60px 24px; }
+      .md-cco-inner { grid-template-columns: 1fr; gap: 40px; }
+      .md-cta { padding: 70px 24px; }
+    }
+    @media (max-width: 600px) {
+      .md-res-grid { grid-template-columns: 1fr; }
+      .md-steps { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body class="md-page">
+
+  <!-- NAV -->
+  <nav class="nav nav-md" id="nav">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-cc">CC</span>
+      <span class="logo-text">Closing Concierge Co.</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="luxe.html">Luxe Collection</a></li>
+      <li><a href="for-clients.html">For Clients</a></li>
+      <li><a href="md-cleaning.html" class="active">MD Cleaning</a></li>
+      <li><a href="contact.html" class="nav-cta">Work With Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="md-hero">
+    <div class="md-hero-inner">
+      <span class="md-eyebrow">In Affiliation with Closing Concierge Co.</span>
+      <h1 class="md-hero-title">
+        MD Cleaning.<br/>
+        <em>Move-in ready.</em>
+      </h1>
+      <p class="md-hero-sub">Professional residential and short-term rental cleaning services across Southern Ontario. From pre-listing deep cleans to Airbnb turnovers — we make sure every property looks as good as it reads.</p>
+      <div class="hero-actions">
+        <a href="#services" class="btn-primary">Our Services</a>
+        <a href="#contact" class="btn-ghost">Get a Quote</a>
+      </div>
+      <div class="md-affil">
+        <span>A proud affiliate of</span>
+        <a href="index.html">Closing Concierge Co.</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRIP -->
+  <div class="md-strip">
+    <div class="md-strip-inner">
+      <div class="md-strip-item">
+        <span class="md-strip-num">01</span>
+        <span class="md-strip-label">Residential Cleans</span>
+      </div>
+      <div class="md-strip-div"></div>
+      <div class="md-strip-item">
+        <span class="md-strip-num">02</span>
+        <span class="md-strip-label">Airbnb & STR Turnovers</span>
+      </div>
+      <div class="md-strip-div"></div>
+      <div class="md-strip-item">
+        <span class="md-strip-num">03</span>
+        <span class="md-strip-label">Pre-Showing Cleans</span>
+      </div>
+      <div class="md-strip-div"></div>
+      <div class="md-strip-item">
+        <span class="md-strip-num">04</span>
+        <span class="md-strip-label">Move-In / Move-Out</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <section class="md-intro">
+    <div class="md-intro-inner">
+      <div class="md-intro-text">
+        <span class="md-section-eyebrow">Why MD Cleaning</span>
+        <h2>A spotless home sells faster. And feels like home sooner.</h2>
+        <p>Whether you're preparing a property for the market, welcoming new owners on closing day, or turning over an Airbnb between guests — the condition of the space matters. First impressions are everything in real estate, and a clean, fresh home shows better, photographs better, and leaves a lasting impression on everyone who walks through the door.</p>
+        <p>MD Cleaning works in close partnership with Closing Concierge Co., meaning agents can coordinate listing support, marketing, and property cleaning all through one trusted contact. No separate vendors. No coordination headaches.</p>
+      </div>
+      <div class="md-trust">
+        <div class="md-trust-item">
+          <span class="md-trust-icon">✦</span>
+          <div>
+            <h4>Southern Ontario Based</h4>
+            <p>We serve the Niagara Region, Hamilton, and surrounding areas — local, reliable, and on your schedule.</p>
+          </div>
+        </div>
+        <div class="md-trust-item">
+          <span class="md-trust-icon">✦</span>
+          <div>
+            <h4>Coordinated With Your Timeline</h4>
+            <p>We work around listing dates, closing days, and guest check-ins so nothing ever falls through the cracks.</p>
+          </div>
+        </div>
+        <div class="md-trust-item">
+          <span class="md-trust-icon">✦</span>
+          <div>
+            <h4>One Contact Through CCo</h4>
+            <p>Agents working with Closing Concierge Co. can request MD Cleaning directly through their existing relationship — no new onboarding required.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="md-services" id="services">
+    <div class="md-services-inner">
+      <span class="md-section-eyebrow">What We Offer</span>
+      <h2>Cleaning services built around real estate.</h2>
+      <p>Every service is scheduled around your timeline — listing dates, closings, guest arrivals. We handle the details so you don't have to.</p>
+
+      <div class="md-svc-grid">
+
+        <div class="md-svc-card">
+          <span class="md-svc-tag">Residential</span>
+          <h3>Move-In Clean</h3>
+          <p>Give new homeowners the welcome they deserve. A thorough deep clean of the entire property before they arrive with the moving truck — so the first moment in their new home is a fresh one.</p>
+          <ul class="md-svc-list">
+            <li>Full deep clean of all rooms</li>
+            <li>Kitchens and appliances cleaned inside and out</li>
+            <li>Bathrooms sanitized top to bottom</li>
+            <li>Floors, baseboards, and fixtures detailed</li>
+            <li>Interior windows and sills cleaned</li>
+          </ul>
+        </div>
+
+        <div class="md-svc-card">
+          <span class="md-svc-tag">Residential</span>
+          <h3>Move-Out Clean</h3>
+          <p>Leave the property in pristine condition for the next chapter. Perfect for sellers preparing for the new owners, tenants vacating, or landlords preparing for a new lease.</p>
+          <ul class="md-svc-list">
+            <li>Deep clean of all rooms post-move</li>
+            <li>Appliances, cabinets, and closets emptied and cleaned</li>
+            <li>Walls spot-cleaned where needed</li>
+            <li>Full bathroom and kitchen sanitization</li>
+            <li>Debris removal and final walkthrough</li>
+          </ul>
+        </div>
+
+        <div class="md-svc-card">
+          <span class="md-svc-tag">Airbnb & Short-Term Rental</span>
+          <h3>STR Turnover Clean</h3>
+          <p>Fast, thorough, and guest-ready every time. We understand the pace of short-term rentals — quick turnarounds, high standards, and zero room for error between check-out and check-in.</p>
+          <ul class="md-svc-list">
+            <li>Full clean between every guest stay</li>
+            <li>Linen and towel refresh coordination</li>
+            <li>Kitchen reset and restocking check</li>
+            <li>Bathrooms sanitized and restocked</li>
+            <li>Damage and supply reporting included</li>
+          </ul>
+        </div>
+
+        <div class="md-svc-card">
+          <span class="md-svc-tag">Real Estate</span>
+          <h3>Pre-Showing Clean</h3>
+          <p>Listings that sparkle sell faster. Before photos are taken or buyers walk through, we make sure every surface, room, and corner is presentation-ready and camera-ready.</p>
+          <ul class="md-svc-list">
+            <li>Full tidy and clean before photography or showings</li>
+            <li>Kitchens and bathrooms staged-clean</li>
+            <li>Floors polished and baseboards dusted</li>
+            <li>Odour neutralization if needed</li>
+            <li>Coordinated directly with your CCo listing timeline</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RESIDENTIAL DETAIL -->
+  <section class="md-residential">
+    <div class="md-res-inner">
+      <span class="md-section-eyebrow">What's Included</span>
+      <h2>No corners cut. Every room covered.</h2>
+      <p>Our residential cleans go room by room with a consistent, detailed approach — because standards matter every single time.</p>
+      <div class="md-res-grid">
+        <div class="md-res-item">
+          <span class="md-res-icon">🍽</span>
+          <h4>Kitchen</h4>
+          <p>Appliances inside and out, counters, sink, cabinets, floors, and backsplash.</p>
+        </div>
+        <div class="md-res-item">
+          <span class="md-res-icon">🚿</span>
+          <h4>Bathrooms</h4>
+          <p>Toilets, tubs, showers, sinks, mirrors, tiles, and floors — fully sanitized.</p>
+        </div>
+        <div class="md-res-item">
+          <span class="md-res-icon">🛏</span>
+          <h4>Bedrooms</h4>
+          <p>Dusting, vacuuming, baseboards, windows, and closet interiors.</p>
+        </div>
+        <div class="md-res-item">
+          <span class="md-res-icon">🛋</span>
+          <h4>Living Areas</h4>
+          <p>Surfaces, fixtures, floors, baseboards, and any built-in shelving or cabinetry.</p>
+        </div>
+        <div class="md-res-item">
+          <span class="md-res-icon">🪟</span>
+          <h4>Windows & Sills</h4>
+          <p>Interior windows cleaned, sills and tracks wiped down.</p>
+        </div>
+        <div class="md-res-item">
+          <span class="md-res-icon">✓</span>
+          <h4>Final Walkthrough</h4>
+          <p>Every clean is reviewed before we leave — we don't consider it done until it's right.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STR SECTION -->
+  <section class="md-str">
+    <div class="md-str-inner">
+      <div class="md-str-text">
+        <span class="md-section-eyebrow">Airbnb & Short-Term Rentals</span>
+        <h2>Your guests expect perfect. We make sure they get it.</h2>
+        <p>Short-term rental hosting lives and dies by reviews. A single bad clean can cost you a five-star rating — and the bookings that come with it. We take that seriously.</p>
+        <p>Our STR turnover service is built for the pace of Airbnb and short-term rental hosting — fast, consistent, and completely reliable between every single guest stay.</p>
+        <a href="#contact" class="btn-ghost" style="margin-top:8px; display:inline-block;">Get a Turnover Quote</a>
+      </div>
+      <div class="md-str-features">
+        <div class="md-str-feat">
+          <span class="md-str-feat-icon">✦</span>
+          <div>
+            <h4>Same-Day Turnovers</h4>
+            <p>We work around your check-out and check-in times so your calendar stays full without delays.</p>
+          </div>
+        </div>
+        <div class="md-str-feat">
+          <span class="md-str-feat-icon">✦</span>
+          <div>
+            <h4>Linen & Supply Coordination</h4>
+            <p>Fresh linens, towel resets, and restocking checks — every turnover is guest-ready.</p>
+          </div>
+        </div>
+        <div class="md-str-feat">
+          <span class="md-str-feat-icon">✦</span>
+          <div>
+            <h4>Damage & Inventory Reporting</h4>
+            <p>We report anything that needs your attention after each clean — so there are no surprises at your next check-in.</p>
+          </div>
+        </div>
+        <div class="md-str-feat">
+          <span class="md-str-feat-icon">✦</span>
+          <div>
+            <h4>Recurring Schedule Available</h4>
+            <p>Set up a recurring cleaning schedule tied to your booking calendar — hands-off hosting done right.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="md-how">
+    <div class="md-how-inner">
+      <span class="md-section-eyebrow">How It Works</span>
+      <h2>Simple. Coordinated. Done.</h2>
+      <div class="md-steps">
+        <div class="md-step">
+          <div class="md-step-num">01</div>
+          <h4>Get in Touch</h4>
+          <p>Email us with your property details, service needed, and preferred date.</p>
+        </div>
+        <div class="md-step">
+          <div class="md-step-num">02</div>
+          <h4>We Confirm & Quote</h4>
+          <p>We'll respond promptly with availability and pricing for your specific clean.</p>
+        </div>
+        <div class="md-step">
+          <div class="md-step-num">03</div>
+          <h4>We Show Up</h4>
+          <p>On time, prepared, and ready to work — no supervision required on your end.</p>
+        </div>
+        <div class="md-step">
+          <div class="md-step-num">04</div>
+          <h4>Property Ready</h4>
+          <p>Your home is guest-ready, listing-ready, or move-in ready. Simple as that.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CCO AFFILIATION CALLOUT -->
+  <section class="md-cco-callout">
+    <div class="md-cco-inner">
+      <div class="md-cco-text">
+        <span class="md-section-eyebrow">Better Together</span>
+        <h2>Part of the Closing Concierge Co. family.</h2>
+        <p>MD Cleaning operates in close affiliation with Closing Concierge Co. — Southern Ontario's premium real estate support service for agents and their clients.</p>
+        <p>For real estate agents, this means listing copy, marketing materials, closing gifts, and property cleaning can all be coordinated through one trusted relationship. Your listing goes to market polished, prepared, and spotless.</p>
+        <a href="services.html" class="btn-primary" style="margin-top:8px; display:inline-block;">See All CCo Services</a>
+      </div>
+      <div class="md-cco-box">
+        <span class="md-cco-box-eyebrow">✦  Closing Concierge Co.</span>
+        <h3>One contact.<br/>Everything handled.</h3>
+        <p>Listing copy, marketing, transaction support, closing gifts, luxury experiences, and property cleaning — all coordinated through Closing Concierge Co.</p>
+        <a href="index.html">Explore Closing Concierge Co. →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="md-cta" id="contact">
+    <div class="md-cta-inner">
+      <span class="md-section-eyebrow">Get in Touch</span>
+      <h2>Ready to book a clean?</h2>
+      <p>Tell us your property, service needed, and preferred date. We'll get back to you promptly with availability and a quote.</p>
+      <a href="mailto:mdcleaning@closingconcierge.online" class="btn-md">Email MD Cleaning</a>
+      <p class="md-cta-email">
+        <a href="mailto:mdcleaning@closingconcierge.online">mdcleaning@closingconcierge.online</a>
+      </p>
+      <p style="margin-top:28px; font-size:0.8rem; color:var(--md-taupe);">
+        Real estate agents working with Closing Concierge Co. can request MD Cleaning<br/>
+        directly through <a href="mailto:hello@closingconcierge.online" style="color:var(--md-mist-dk);">hello@closingconcierge.online</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer footer-md">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo-cc">CC</span>
+        <span class="footer-logo-text">Closing Concierge Co.</span>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="luxe.html">Luxe Collection</a>
+        <a href="for-clients.html">For Clients</a>
+        <a href="md-cleaning.html">MD Cleaning</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-contact">
+        <a href="mailto:hello@closingconcierge.online">hello@closingconcierge.online</a>
+        &nbsp;·&nbsp;
+        <a href="mailto:mdcleaning@closingconcierge.online">mdcleaning@closingconcierge.online</a>
+      </p>
+      <p class="footer-copy">© 2025 Closing Concierge Co. · MD Cleaning is an affiliated independently operated service · All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
