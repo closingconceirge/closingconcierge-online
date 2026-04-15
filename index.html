@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1PL8MV1SLC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-1PL8MV1SLC');
-</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Closing Concierge Co. — From Listing to Closing, Handled Beautifully</title>
@@ -18,8 +9,42 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .notice-banner {
+      background: #2C2A27;
+      border-bottom: 1px solid rgba(212,175,90,0.4);
+      padding: 14px 48px;
+      text-align: center;
+      position: relative;
+      z-index: 200;
+    }
+    .notice-banner p {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.8rem;
+      color: rgba(240,232,212,0.85);
+      letter-spacing: 0.03em;
+      line-height: 1.6;
+    }
+    .notice-banner a {
+      color: #D4AF5A;
+      border-bottom: 1px solid rgba(212,175,90,0.5);
+      transition: opacity 0.2s;
+    }
+    .notice-banner a:hover { opacity: 0.75; }
+    .notice-banner a:visited { color: #D4AF5A; }
+    .notice-banner strong { color: #D4AF5A; font-weight: 500; }
+    @media (max-width: 900px) {
+      .notice-banner { padding: 14px 20px; }
+      .notice-banner p { font-size: 0.75rem; }
+    }
+  </style>
 </head>
 <body>
+
+  <!-- NOTICE BANNER -->
+  <div class="notice-banner">
+    <p>We sincerely apologize — we recently discovered our contact form had not been working, and some inquiries may not have reached us. <strong>The form is now fully fixed.</strong> If you reached out and didn't hear back, we are so sorry. Please resend to <a href="mailto:hello@closingconcierge.online">hello@closingconcierge.online</a> and we'll respond within 4 business hours. ✦</p>
+  </div>
 
   <!-- NAV -->
   <nav class="nav" id="nav">
@@ -35,8 +60,6 @@
       <li><a href="services.html">Services</a></li>
       <li><a href="luxe.html">Luxe Collection</a></li>
       <li><a href="for-clients.html">For Clients</a></li>
-      <li><a href="md-cleaning.html">MD Cleaning</a></li>
-      <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html" class="nav-cta">Work With Us</a></li>
     </ul>
   </nav>
