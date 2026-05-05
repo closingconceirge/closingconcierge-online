@@ -457,17 +457,14 @@
         flex-direction: column;
         align-items: flex-start;
       }
-
       .nav-links {
         gap: 18px;
         justify-content: flex-start;
       }
-
       .post-card {
         grid-template-columns: 1fr;
         gap: 18px;
       }
-
       .post-num {
         text-align: left;
         font-size: 48px;
@@ -475,28 +472,11 @@
     }
 
     @media (max-width: 640px) {
-      .hero-inner {
-        padding: 82px 20px 72px;
-      }
-
-      .section,
-      .post-view {
-        padding-left: 20px;
-        padding-right: 20px;
-      }
-
-      .post-card {
-        padding: 28px 24px;
-      }
-
-      .cta-block {
-        padding: 30px 26px;
-      }
-
-      .pullquote {
-        font-size: 24px;
-        padding: 20px 22px;
-      }
+      .hero-inner { padding: 82px 20px 72px; }
+      .section, .post-view { padding-left: 20px; padding-right: 20px; }
+      .post-card { padding: 28px 24px; }
+      .cta-block { padding: 30px 26px; }
+      .pullquote { font-size: 24px; padding: 20px 22px; }
     }
   </style>
 </head>
@@ -520,9 +500,7 @@
     <div class="hero-inner">
       <p class="hero-eyebrow">The Journal</p>
       <h1 class="hero-title">Thoughtful writing<br><em>for thoughtful agents.</em></h1>
-      <p class="hero-sub">
-        A collection of articles on listing copy, luxury closing experiences, client presentation, and the details that make a real estate brand feel more elevated.
-      </p>
+      <p class="hero-sub">A collection of articles on listing copy, luxury closing experiences, client presentation, and the details that make a real estate brand feel more elevated.</p>
       <p class="hero-contact">
         hello@closingconcierge.online ·
         <a href="https://instagram.com/theclosingconcierge.co" target="_blank" rel="noopener noreferrer">@theclosingconcierge.co</a>
@@ -532,7 +510,6 @@
 
   <section class="section" id="journalIndex">
     <p class="section-label">Resources for Real Estate Agents</p>
-
     <div class="post-list">
 
       <div class="post-card" onclick="showPost(0)">
@@ -585,8 +562,60 @@
         </div>
       </div>
 
+      <div class="post-card" onclick="showPost(5)">
+        <div class="post-num">06</div>
+        <div class="post-meta">
+          <p class="post-category">About Us</p>
+          <h2 class="post-title">Meet Closing Concierge Co. — Your Behind-the-Scenes Real Estate Partner</h2>
+          <p class="post-excerpt">From listing copy to luxury closing experiences, we're the behind-the-scenes partner Southern Ontario agents didn't know they needed. Here's who we are, what we do, and who we work with.</p>
+          <span class="post-read">Read Article</span>
+        </div>
+      </div>
+
+      <div class="post-card" onclick="showPost(6)">
+        <div class="post-num">07</div>
+        <div class="post-meta">
+          <p class="post-category">Listing Tips / Copywriting</p>
+          <h2 class="post-title">Why Your MLS Listing Copy Might Be Costing You Money</h2>
+          <p class="post-excerpt">Generic MLS copy isn't neutral — it's actively hurting your listings. Here's what bad listing copy looks like, why it matters, and how premium copywriting can change your results.</p>
+          <span class="post-read">Read Article</span>
+        </div>
+      </div>
+
+      <div class="post-card" onclick="showPost(7)">
+        <div class="post-num">08</div>
+        <div class="post-meta">
+          <p class="post-category">Closing Experiences / Agent Tips</p>
+          <h2 class="post-title">The Closing Gift Guide: How to Leave a Lasting Impression</h2>
+          <p class="post-excerpt">A great closing gift isn't just thoughtful — it's a referral strategy. Here's everything you need to know about real estate closing gifts, from standard to luxury.</p>
+          <span class="post-read">Read Article</span>
+        </div>
+      </div>
+
+      <div class="post-card" onclick="showPost(8)">
+        <div class="post-num">09</div>
+        <div class="post-meta">
+          <p class="post-category">Events / Affiliations</p>
+          <h2 class="post-title">Why Your Real Estate Event Needs a Sweet Cart</h2>
+          <p class="post-excerpt">The Sweet Cart Co. is available for hire for real estate events across Southern Ontario — builder launches, broker appreciation nights, lender events, open houses, and more.</p>
+          <span class="post-read">Read Article</span>
+        </div>
+      </div>
+
+      <div class="post-card" onclick="showPost(9)">
+        <div class="post-num">10</div>
+        <div class="post-meta">
+          <p class="post-category">Web Design / Services</p>
+          <h2 class="post-title">Does Your Business Website Actually Reflect Your Brand?</h2>
+          <p class="post-excerpt">Your website is your first impression — and for most small businesses, it's not making the right one. Here's what to do about it.</p>
+          <span class="post-read">Read Article</span>
+        </div>
+      </div>
+
     </div>
   </section>
+
+  <!-- ── EXISTING POSTS 0–4 ── -->
 
   <div class="post-view" id="post-0">
     <button class="back-btn" onclick="showIndex()">← Back to Journal</button>
@@ -595,24 +624,17 @@
     <p class="post-byline">By Closing Concierge Co. · Journal for Real Estate Agents</p>
     <div class="post-body">
       <p>A strong listing description does not just describe a property. It creates enough feeling to pull a buyer off the couch and into a showing. And yet, most MLS copy fails at the first hurdle. These are the five mistakes we see most often, and what to do instead.</p>
-
       <h3>1. Leading with square footage instead of a feeling</h3>
       <p>The first line is your most valuable real estate on the page. When it opens with square footage, bedroom count, or a recycled adjective, you have already spent it on information the buyer can see elsewhere. Start with the feeling, the rhythm, the moment of living there. That is the part they cannot pull from a data field.</p>
-
       <div class="pullquote">The goal is not to describe the property. It is to make the buyer feel like they already live there.</div>
-
       <h3>2. Listing features instead of experiences</h3>
-      <p>There is a meaningful difference between “updated kitchen with quartz countertops” and “a kitchen made for slow Sunday mornings and long dinners that run late.” One is a feature. The other is a reason to care. Your copy should translate features into lived experience.</p>
-
+      <p>There is a meaningful difference between "updated kitchen with quartz countertops" and "a kitchen made for slow Sunday mornings and long dinners that run late." One is a feature. The other is a reason to care. Your copy should translate features into lived experience.</p>
       <h3>3. Ignoring the neighbourhood entirely</h3>
       <p>Buyers are not only choosing a property. They are choosing a version of daily life. The coffee shop down the street, the trail nearby, the school route, the convenience, the energy of the area. If your copy ends at the front door, some of your strongest material is being left unwritten.</p>
-
       <h3>4. Writing for search engines instead of people</h3>
       <p>Keyword-heavy copy reads like a checklist. Buyers scroll fast and decide faster. A clean, emotionally intelligent paragraph that keeps someone reading will always outperform a stack of phrases designed only to sound optimized.</p>
-
       <h3>5. Using the same template for every property</h3>
       <p>Buyers notice when copy feels recycled. So do sellers. Every home has something specific worth writing toward, whether that is the light, the layout, the atmosphere, or the way the home supports a certain lifestyle. Find that detail first. It usually becomes the line that books the showing.</p>
-
       <p>If you want to see what this looks like in practice, we are happy to write a complimentary sample for one active or upcoming listing.</p>
     </div>
     <div class="cta-block">
@@ -629,21 +651,15 @@
     <p class="post-byline">By Closing Concierge Co. · Journal for Real Estate Agents</p>
     <div class="post-body">
       <p>The closing gift is the punctuation at the end of the transaction. At the $1M+ level, it should feel considered, refined, and unmistakably intentional. It is not about spending more. It is about understanding the standard the client is already used to receiving.</p>
-
       <h3>Artisan and local still win</h3>
       <p>A beautifully curated package from a local cheesemaker, winery, florist, or specialty grocer can land exceptionally well when it feels specific to the area and tailored to the client. The detail matters more than the price tag. Personal always outperforms generic.</p>
-
       <div class="pullquote">The best closing gifts do not feel expensive. They feel personal.</div>
-
       <h3>Experiences tend to last longer than objects</h3>
       <p>A dinner reservation, a spa escape, a private tasting, or a boutique overnight stay creates memory. That is the real asset. When a gift feels like an extension of the care they received throughout the transaction, it deepens the impression your brand leaves behind.</p>
-
       <h3>Home pieces still work when they feel elevated</h3>
       <p>A handcrafted serving board, beautiful linen pieces, a high-quality candle, a thoughtful home detail from a local maker. These land best when they feel restrained and tasteful. Avoid anything loud, over-branded, or bulk-ordered.</p>
-
       <h3>The Luxe Collection approach</h3>
       <p>Our bespoke closing experiences are designed around the property, the client, and the calibre of the transaction. That is the difference. It arrives feeling like it was made for them, not selected from a catalogue.</p>
-
       <h3>What to avoid</h3>
       <p>Anything impersonal, logo-heavy, or transparently transactional. At this level, clients notice immediately when something feels like a task that was checked off instead of a gesture that was thoughtfully handled.</p>
     </div>
@@ -661,18 +677,13 @@
     <p class="post-byline">By Closing Concierge Co. · Journal for Real Estate Agents</p>
     <div class="post-body">
       <p>There is a reason some listings get bookmarked and others disappear in seconds. It is rarely just the photography. More often, it is the first line of copy and whether it creates a reason to stop.</p>
-
       <h3>The first few words carry most of the weight</h3>
       <p>Buyers scroll quickly. The opening line works almost like a headline. If the start is vague, generic, or interchangeable with every other listing in the market, you lose your chance. Lead with something sensory, specific, or quietly surprising.</p>
-
       <div class="pullquote">Buyers are not really reading your listing first. They are scanning it for a reason to stop.</div>
-
       <h3>Emotion makes the first decision</h3>
       <p>The decision to book a showing is often emotional long before it becomes rational. The square footage and school district help justify the choice later. The initial pause almost always happens because something about the copy made the home feel real.</p>
-
       <h3>Specificity feels truthful</h3>
       <p>Words like gorgeous and stunning have been emptied out by overuse. Specific detail is what feels honest. A reading nook under the front window. Late afternoon light across the kitchen floor. A tucked-away mudroom that quietly fixes family chaos. Those details hold weight.</p>
-
       <h3>End with momentum</h3>
       <p>The last line should leave the reader leaning forward. Not pressured. Just nudged. Give them a reason to move, whether that is a private showing, a weekend open house, or simply a sense that this one deserves a closer look.</p>
     </div>
@@ -690,18 +701,13 @@
     <p class="post-byline">By Closing Concierge Co. · Journal for Real Estate Agents</p>
     <div class="post-body">
       <p>Every piece of copy that leaves under your name is telling people something about your standards. The only real question is whether you are being intentional about what that message is.</p>
-
       <h3>Sellers notice more than you think</h3>
       <p>Potential sellers often read your current listings before they ever call you. They are not just scanning prices. They are looking at how seriously you take presentation, how polished your materials feel, and whether your marketing reflects care or speed.</p>
-
       <div class="pullquote">Your MLS copy is often the first proof of what it feels like to work with you.</div>
-
       <h3>Other agents notice too</h3>
       <p>The agent who consistently publishes thoughtful, strong copy develops a reputation, whether they mean to or not. That reputation affects referral trust, professional respect, and the way your brand is perceived inside the market.</p>
-
       <h3>Consistency builds memory</h3>
       <p>Not every listing should sound the same. But the level of care should. When people repeatedly encounter strong presentation, clean writing, and thoughtful client details under your name, that consistency becomes part of your brand.</p>
-
       <h3>You do not have to be the one writing it</h3>
       <p>Many excellent agents are excellent because they are relationship-builders, negotiators, and operators. Writing does not need to sit in the same lane. What matters is that the final product reflects the standard you want attached to your name.</p>
     </div>
@@ -719,18 +725,13 @@
     <p class="post-byline">By Closing Concierge Co. · Journal for Real Estate Agents</p>
     <div class="post-body">
       <p>Most agents know their numbers. Fewer know exactly where their energy disappears. That gap matters, because time spent doing everything yourself quietly erodes both revenue and the quality of the experience you are trying to deliver.</p>
-
       <h3>Time has a real rate attached to it</h3>
       <p>If your best work happens in client conversations, negotiations, and relationship-building, then every hour spent writing, sourcing, formatting, coordinating, and following up carries a real cost. Delegation is not indulgence. It is arithmetic.</p>
-
       <div class="pullquote">The agents who scale are rarely the ones doing more. They are the ones protecting their time for the work only they can do.</div>
-
       <h3>Cognitive load is the part most people miss</h3>
       <p>It is not just the visible hours. It is the mental clutter. Tracking gifts, writing emails, coordinating details, worrying about the brochure, fixing the copy. Even when the task is small, the mental drag is not. That compounds quickly.</p>
-
       <h3>What we take off your plate</h3>
       <p>Listing copy, print and marketing materials, transaction support, closing gifts, elevated client touches, and behind-the-scenes coordination. The pieces that matter, but do not necessarily need to be done by you personally.</p>
-
       <h3>Starting small is still smart</h3>
       <p>You do not need to outsource everything at once. Often the easiest starting point is the task that consumes the most time while still being highly visible. For many agents, that is listing copy.</p>
     </div>
@@ -738,6 +739,160 @@
       <p class="cta-title">Start with one listing and see how it feels.</p>
       <p>A polished sample is often the fastest way to see what better support actually looks like in practice.</p>
       <a href="mailto:hello@closingconcierge.online?subject=Start%20With%20One%20Listing">Email Us to Start</a>
+    </div>
+  </div>
+
+  <!-- ── NEW POSTS 5–9 ── -->
+
+  <div class="post-view" id="post-5">
+    <button class="back-btn" onclick="showIndex()">← Back to Journal</button>
+    <p class="post-cat">About Us</p>
+    <h1 class="post-h1">Meet Closing Concierge Co. — Your Behind-the-Scenes Real Estate Partner</h1>
+    <p class="post-byline">By Closing Concierge Co. · Journal for Real Estate Agents</p>
+    <div class="post-body">
+      <p>Let's be honest: most real estate agents are doing the work of five people. You're writing your own listing copy, sourcing closing gifts, coordinating cleans, chasing deadlines, and somehow still managing to show up to every appointment like a consummate professional. It's a lot.</p>
+      <p>That's exactly why we built Closing Concierge Co.</p>
+      <p>We're a premium real estate support business serving agents across Southern Ontario — and we exist for one reason: to handle the behind-the-scenes details so beautifully that your clients never know we're there. They just think you've got everything incredibly together. (You do. You've just got help.)</p>
+
+      <h3>Who We Are</h3>
+      <p>Closing Concierge Co. was founded by Noa Elkin with a simple belief: that real estate agents deserve a partner who takes their business as seriously as they do. Every piece of work that leaves our office has Noa's name on it. We don't outsource. We don't use generic templates. We write, design, coordinate, and curate — personally, intentionally, and with a deep understanding of what it takes to stand out in this market.</p>
+
+      <h3>What We Do</h3>
+      <p>We offer four pillars of real estate support. Listing and marketing — MLS write-ups that actually sell the lifestyle, feature sheets, brochures, social media content, and video scripts. Transaction support — pre-listing packages, conditional follow-up emails, and client communication templates. Closing experiences — from thoughtfully curated closing gifts to fully coordinated luxury resort packages. And property cleaning — through our affiliation with MD Cleaning, we coordinate move-in and move-out cleans, pre-showing cleans, and Airbnb turnovers, all through a single contact.</p>
+
+      <div class="pullquote">We work quietly in the background so you can focus on what you do best: closing deals and building relationships.</div>
+
+      <h3>The Luxe Collection</h3>
+      <p>The Luxe Collection is our white-glove service tier, built specifically for premium listings at $1,000,000 and above. Signature MLS copy that reads like an invitation. Priority turnaround. Two rounds of revisions. Dedicated concierge support from start to finish. Bespoke closing experiences — White Oaks Resort and Spa, fine dining for two, couples massages, personalized keepsakes. Because when a property crosses the million-dollar threshold, the presentation needs to match.</p>
+
+      <h3>Our Affiliations and Extended Services</h3>
+      <p>MD Cleaning serves Southern Ontario with everything from pre-showing cleans to full move-out deep cleans — coordinated through one email. For high-priority listings, we also build bespoke listing landing pages: full-screen, immersive, dedicated URLs your clients can share everywhere. Our web design services extend to any small business that wants a professional, beautifully designed online presence. And our newest affiliation, The Sweet Cart Co., is available for hire at real estate events — builder launches, broker appreciation nights, open houses, and more. One sweet cart. Endless impressions.</p>
+
+      <h3>Who We Work With</h3>
+      <p>Real estate agents across Southern Ontario, both independent and team-based. Brokerages looking to elevate their brand. Mortgage agents and lenders who want to add a memorable touch to client events. Builders launching new communities. Any professional in the real estate ecosystem who believes the details matter.</p>
+    </div>
+    <div class="cta-block">
+      <p class="cta-title">Ready to work together?</p>
+      <p>Whether you have a listing going live next week, a closing gift to coordinate, or you've been quietly thinking there has to be a better way — we'd love to hear from you. We respond to every inquiry personally, within 4 business hours.</p>
+      <a href="mailto:hello@closingconcierge.online">Get in Touch</a>
+    </div>
+  </div>
+
+  <div class="post-view" id="post-6">
+    <button class="back-btn" onclick="showIndex()">← Back to Journal</button>
+    <p class="post-cat">Listing Tips / Copywriting</p>
+    <h1 class="post-h1">Why Your MLS Listing Copy Might Be Costing You Money</h1>
+    <p class="post-byline">By Closing Concierge Co. · Journal for Real Estate Agents</p>
+    <div class="post-body">
+      <p>Picture this: a buyer is scrolling through MLS at 11pm on a Tuesday. They've seen forty listings. They're tired. They're a little overwhelmed. And then — suddenly — one listing description actually makes them feel something. It's not just a list of features. It's a story. It's a lifestyle. It makes them lean forward and say, that one.</p>
+      <p>Now picture them clicking past the listing two spots up that reads: "Spacious 3-bed, 2-bath home. Updated kitchen. Close to schools. Won't last!" That second listing? That's yours. We're not here to be harsh — we know agents are juggling a hundred things when a listing goes live. But the copy you put on your MLS listing is doing more work than you think. And if it's generic, rushed, or formulaic, it's costing you.</p>
+
+      <h3>What Bad Listing Copy Actually Looks Like</h3>
+      <p>You've seen it. You've probably written it in a pinch. "Stunning home in a great location! Open-concept kitchen with S/S appliances. Master with ensuite. 2-car garage. Close to all amenities. A must see!!!" These descriptions aren't wrong, exactly. They're just doing nothing. They're not creating a picture. They're not speaking to anyone specific. They're not giving a buyer a reason to feel emotionally connected to a property before they've even walked through the door.</p>
+
+      <div class="pullquote">Generic copy isn't neutral. It's actively working against you.</div>
+
+      <h3>What Great Listing Copy Does Differently</h3>
+      <p>Great real estate copy starts with a question most agents don't have time to ask: who is actually buying this home, and what do they want to feel? A young family wants to feel like they've found the place where everything begins. A downsizer wants to feel like they're gaining something. A luxury buyer wants to feel like this property matches the life they've already built. Once you know who you're writing for, great copy leads with lifestyle not logistics, earns the details, and uses language that's specific rather than generic.</p>
+
+      <h3>What This Means for Your Business</h3>
+      <p>Here's the part agents often underestimate: the quality of your listing copy reflects on you, not just the property. Your sellers are watching. Your buyers are watching. Other agents in your market are watching. When your listings consistently use elevated, thoughtful copy, it communicates that you're the kind of agent who leaves nothing to chance. Conversely, rushed, generic copy signals — even subconsciously — that you're spread thin. That the details don't matter to you. They matter. And your copy should prove it.</p>
+
+      <h3>This Is Exactly What We Do</h3>
+      <p>At Closing Concierge Co., listing copywriting is the heart of what we offer. Every MLS write-up we produce starts with a thorough brief — your property details, your target buyer, the features you want highlighted, the tone that fits the listing. From there, we write copy that earns the showing. Standard listings start at $150. Luxe Collection properties start at $350. Turnaround is 24 to 48 hours. You submit the brief, we handle the rest.</p>
+    </div>
+    <div class="cta-block">
+      <p class="cta-title">Your listings deserve better copy. Let's give it to them.</p>
+      <p>Email us or submit a listing brief and see the difference on your next property.</p>
+      <a href="mailto:hello@closingconcierge.online">Email Us</a>
+    </div>
+  </div>
+
+  <div class="post-view" id="post-7">
+    <button class="back-btn" onclick="showIndex()">← Back to Journal</button>
+    <p class="post-cat">Closing Experiences / Agent Tips</p>
+    <h1 class="post-h1">The Closing Gift Guide: How to Leave a Lasting Impression</h1>
+    <p class="post-byline">By Closing Concierge Co. · Journal for Real Estate Agents</p>
+    <div class="post-body">
+      <p>The closing is supposed to be a celebration. Keys are exchanged. Documents are signed. Your clients are emotional, exhausted, and absolutely thrilled — and in that moment, you have a window. A narrow, golden window to create a memory that will follow them into every conversation they have about real estate for the rest of their lives.</p>
+      <p>"And our agent — she was incredible. Even arranged this beautiful—" That's the referral. That's the five-star review. That's the call two years from now when their best friends are ready to buy. It all comes down to how you close.</p>
+
+      <h3>Why Most Closing Gifts Miss the Mark</h3>
+      <p>The gift card to a chain restaurant. The generic bottle of wine in a bag from the liquor store. The fruit basket with the cellophane that crinkles loudly when they open it. The branded tote bag with your headshot on it. These gifts aren't thoughtful. They're transactional. They say: I knew I needed to get you something, so here's something. Your clients spent hundreds of thousands of dollars and trusted you through one of the most stressful experiences of their lives. The closing gift is not the moment to phone it in.</p>
+
+      <div class="pullquote">The closing moment is too important to wing.</div>
+
+      <h3>What Makes a Closing Gift Actually Work</h3>
+      <p>A great closing gift feels personal — even if you don't know someone's exact taste, you can read a transaction. It has a moment — the best gifts are designed to be unwrapped, experienced, or savoured, not immediately forgotten. And it reflects on you. When your clients rave about it, they're raving about you. That's the whole point.</p>
+
+      <h3>Closing Gift Options at Every Level</h3>
+      <p>Standard closing gifts from $150 to $300 feature curated suites with artisan local products, quality home items, and personalized touches — beautifully packaged start to finish. Premium experience packages from $300 to $700 include spa experiences, fine dining gift certificates, curated wine collections, or event tickets. Luxury resort experiences from $1,200 to $2,500 and above are our most unforgettable offering — fully coordinated stays at properties like White Oaks Resort and Spa, including accommodations, dinner for two, couples massage, and a personalized keepsake note. We source it, coordinate it, package it, and deliver. You take all the credit.</p>
+
+      <h3>No More Last-Minute Panics</h3>
+      <p>We hear it from agents constantly: "I always mean to do something special and then the closing sneaks up on me." That ends now. When you work with Closing Concierge Co., you submit your request alongside your listing intake and we handle everything from there. Standard gifts in 2 to 5 business days. Luxury experiences in 5 to 10. Rush orders accommodated where possible.</p>
+    </div>
+    <div class="cta-block">
+      <p class="cta-title">Let us handle the closing moment.</p>
+      <p>Reach out and let's talk about what your clients deserve.</p>
+      <a href="mailto:hello@closingconcierge.online">Get in Touch</a>
+    </div>
+  </div>
+
+  <div class="post-view" id="post-8">
+    <button class="back-btn" onclick="showIndex()">← Back to Journal</button>
+    <p class="post-cat">Events / Affiliations</p>
+    <h1 class="post-h1">Why Your Real Estate Event Needs a Sweet Cart</h1>
+    <p class="post-byline">By Closing Concierge Co. · Journal for Real Estate Agents</p>
+    <div class="post-body">
+      <p>You've attended the events. The standard ones. Catering trays, a cash bar if you're lucky, some branded pens in a bowl by the door. Everyone mills around, eats a bit, makes small talk, and leaves. And then there are the events people actually remember. The ones where something happened that made them stop scrolling through their phone and actually engage. Where they took a photo. Where they told someone else about it the next day. That detail? It might be a sweet cart.</p>
+
+      <h3>Introducing The Sweet Cart Co.</h3>
+      <p>We are thrilled to introduce our newest affiliation: The Sweet Cart Co., a beautifully styled confectionery experience available for hire at real estate events across Southern Ontario. The Sweet Cart Co. brings a fully curated, visually stunning sweet display to your event — an indulgent, interactive experience that draws people in, invites conversation, and makes every guest feel like they're somewhere special. This is not a dessert table. This is an experience.</p>
+
+      <div class="pullquote">The detail that turns a good event into a memorable one.</div>
+
+      <h3>Who It's For</h3>
+      <p>Builder community launches — you're unveiling a new development and want people to feel the lifestyle before they've walked the model home. Broker appreciation events — you're thanking your agents and want the evening to feel elevated and memorable. Lender and mortgage agent events — client appreciation nights, referral partner lunches, industry mixers where you want to leave a lasting impression. Open houses — for premium listings, a styled sweet cart transforms a showing into an experience. Buyers linger. They feel at home. They start imagining themselves in the space. Team events and brokerage milestones — if your people are gathering, they deserve something worth showing up for.</p>
+
+      <h3>Why It Works</h3>
+      <p>There's a reason event stylists call the food table the anchor of any room. People are drawn to it. They congregate around it. It gives strangers a reason to stand next to each other and start a conversation. The Sweet Cart Co. is curated, elevated, and deeply photogenic. Your guests will notice. Their phones will notice. In an era where every event moment has the potential to live on someone's Instagram story, having a visually striking focal point is not just a nice touch. It's marketing.</p>
+
+      <h3>How to Book</h3>
+      <p>The Sweet Cart Co. is available through Closing Concierge Co. — meaning you get one point of contact for coordination, logistics, and any other event support or materials you need alongside it. Email us at hello@closingconcierge.online with your event date, location, and approximate guest count. We'll handle the introduction and coordination from there.</p>
+    </div>
+    <div class="cta-block">
+      <p class="cta-title">The details make the event. Let's make yours unforgettable.</p>
+      <p>Inquire about The Sweet Cart Co. for your next real estate event.</p>
+      <a href="mailto:hello@closingconcierge.online?subject=Sweet%20Cart%20Inquiry">Inquire Now</a>
+    </div>
+  </div>
+
+  <div class="post-view" id="post-9">
+    <button class="back-btn" onclick="showIndex()">← Back to Journal</button>
+    <p class="post-cat">Web Design / Services</p>
+    <h1 class="post-h1">Does Your Business Website Actually Reflect Your Brand?</h1>
+    <p class="post-byline">By Closing Concierge Co. · Journal for Real Estate Agents</p>
+    <div class="post-body">
+      <p>Here's a scenario we encounter more than we'd like to admit: someone hears about a business. They're interested. They pull up the website. Within four seconds, they've quietly decided that this business probably isn't quite what they're looking for — and they close the tab. The business owner never knows this happened. Their services are excellent. Their reputation is solid. Their brand, in person, is absolutely on point. But the website? The website is doing the opposite of selling them.</p>
+
+      <h3>The Truth About First Impressions Online</h3>
+      <p>Your website is not a formality. It is not a digital business card you check off once and forget about. For most people who encounter your business for the first time — through a Google search, an Instagram bio link, or a referral who said check out their site — your website is your first impression. And first impressions decide whether someone reaches out or moves on. A slow-loading, visually cluttered, or embarrassingly outdated website communicates things you don't mean to communicate: that you're not current, that details don't matter to you, that your business might not be quite as established as you'd like it to appear. None of that is fair. But it's the reality of how people decide online.</p>
+
+      <div class="pullquote">Your website should be working for you. Most aren't.</div>
+
+      <h3>Who We Build Websites For</h3>
+      <p>Real estate agents and teams — your website should position you as the agent of choice in your market. Brokerages — a brokerage website needs to attract clients and attract agents simultaneously. Mortgage agents and lenders — the mortgage world is competitive and your website needs to quickly communicate trust, expertise, and accessibility. Small businesses of all kinds — real estate is our home turf, but our web design services extend to any business that wants a professional, beautifully designed online presence.</p>
+
+      <h3>Custom Listing Landing Pages</h3>
+      <p>For premium listings, we also build bespoke property landing pages — standalone sites dedicated entirely to a single listing. A buyer receives the link and lands on a full-screen, beautifully designed page with immersive photography, lifestyle-forward copy, neighbourhood highlights, and a dedicated inquiry form. No competing listings. No distracting interface. Just the property, presented at its absolute best. Particularly powerful for Luxe Collection properties, new builds, and any listing where the agent wants to go above and beyond the standard MLS experience.</p>
+
+      <h3>The Founding Client Offer</h3>
+      <p>We're currently welcoming our first wave of web design clients, and we're offering a founding client rate for businesses ready to move quickly. Packages start at $1,499 for up to five pages, $2,199 for up to ten, and $3,499 for a full fifteen-page prestige build with complete branding. Every package includes domain registration, custom design, full copywriting, mobile optimization, and publishing. Live in ten business days. If you've been putting off fixing your website — or finally launching one — this is the moment to do it.</p>
+    </div>
+    <div class="cta-block">
+      <p class="cta-title">Your website should be working for you.</p>
+      <p>Reach out and mention web design. We'll set up a no-obligation conversation about what your site needs to do and how we can make it happen.</p>
+      <a href="web-design.html">See Web Design Packages</a>
     </div>
   </div>
 
@@ -751,6 +906,7 @@
         <a href="index.html">Home</a>
         <a href="luxe.html">Luxe Collection</a>
         <a href="for-clients.html">For Clients</a>
+        <a href="web-design.html">Web Design</a>
         <a href="contact.html">Contact</a>
       </nav>
       <p class="footer-contact"><a href="mailto:hello@closingconcierge.online">hello@closingconcierge.online</a></p>
